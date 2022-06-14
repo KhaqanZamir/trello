@@ -1,6 +1,5 @@
-import { faCheck, faPen, faTrashCan } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import SingleTodo from './SingleTodo';
 import './styles.css'
 import Todo from './Todo';
 
@@ -10,21 +9,12 @@ interface Props{
 }
 
 const TodoList: React.FC<Props> = ({todos, setTodos}) => {
+
   return (
     <div className='todos'>
         {
             todos.map((todo) => (
-                <div className='todo'>
-                    <div className='todo-header'>
-                        <p>{todo.id}</p>
-                        <div className='todo-icons'>
-                            <FontAwesomeIcon icon={faPen} />
-                            <FontAwesomeIcon icon={faTrashCan} />
-                            <FontAwesomeIcon icon={faCheck} />
-                        </div>
-                    </div>
-                    <p>{todo.todo}</p>
-                </div>
+                <SingleTodo todo={todo} todos={todos} setTodos={setTodos} />
             ))
         }
     </div>
