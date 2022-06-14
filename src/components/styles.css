@@ -78,8 +78,9 @@
       width: 45%;
       justify-content: space-around;
       gap: 15px;
+      height: fit-content;
       background-color: #3ad5a1;
-      padding: 15px 15px;
+      padding: 35px 15px;
       border-radius: 10px;
   }
 
@@ -87,6 +88,7 @@
     display: block;
     font-size: 24px;
     font-weight: 600;
+    margin: 0px;
   }
 
   .todo{
@@ -164,15 +166,23 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 15px 15px;
+    height: fit-content;
+    padding: 35px 15px;
   }
 
 .completed-tasks h2{
   display: block;
   font-size: 24px;
   font-weight: 600;
+  margin: 0px;
   text-align: center;
 }
+
+  @media (max-width: 889px) {
+      .todos, .completed-tasks{
+        width: 100%;
+      }
+  }
 
   @media (max-width: 767px) {
       .todo{
