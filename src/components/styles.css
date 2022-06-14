@@ -97,7 +97,7 @@
       align-items: flex-start;
       padding: 10px;
       cursor: grab;
-      margin: auto;
+      margin: 0px auto;
       min-height: 30px;
       line-height: 25px;
       border-radius: 10px;
@@ -171,6 +171,7 @@
   display: block;
   font-size: 24px;
   font-weight: 600;
+  text-align: center;
 }
 
   @media (max-width: 767px) {
